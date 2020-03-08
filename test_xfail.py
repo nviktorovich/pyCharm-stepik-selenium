@@ -1,11 +1,11 @@
 import pytest
 
-
+@pytest.mark.xfail(strict=True)
 def test_succeed():
     assert True
 
 
-@pytest.mark.xfail("failing configuration (but should work)")
+@pytest.mark.xfail
 def test_not_succeed():
     assert False
 
